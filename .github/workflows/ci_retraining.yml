@@ -62,7 +62,7 @@ jobs:
     - name: Build Docker Model
       run: |
         cd MLProject
-        sed -i '/channels:/a \  - nodefaults' "mlruns/0/${{ env.RUN_ID }}/artifacts/model/conda.yaml"
+        python -c "import yaml; path='mlruns/0/${{ env.RUN_ID }}/artifacts/model/conda.yaml'; data=yaml.safe_load(open(path)); data['channels']=['conda-forge', 'nodefaults']; yaml.dump(data, open(path, 'w'))"
         mlflow models build-docker -m "mlruns/0/${{ env.RUN_ID }}/artifacts/model" -n housing-model:latest --env-manager=conda
 
     - name: Log in Docker Hub
