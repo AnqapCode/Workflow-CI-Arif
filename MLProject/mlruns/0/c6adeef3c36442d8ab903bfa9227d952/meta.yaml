@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI-Arif/Workflow-CI-Arif/MLProject/mlruns/0/c6adeef3c36442d8ab903bfa9227d952/artifacts
+end_time: 1778310316153
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c6adeef3c36442d8ab903bfa9227d952
+run_name: rogue-dog-914
+run_uuid: c6adeef3c36442d8ab903bfa9227d952
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778310304322
+status: 3
+tags: []
+user_id: runner
