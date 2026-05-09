@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI-Arif/Workflow-CI-Arif/MLProject/mlruns/0/f611edaf53fa4252b9be7ce39808b569/artifacts
+end_time: 1778308085453
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f611edaf53fa4252b9be7ce39808b569
+run_name: stylish-smelt-280
+run_uuid: f611edaf53fa4252b9be7ce39808b569
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778308072822
+status: 3
+tags: []
+user_id: runner
