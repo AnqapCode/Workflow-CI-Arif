@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI-Arif/Workflow-CI-Arif/MLProject/mlruns/0/cf83d6b76d4a45aea4d895e4c0bed3a5/artifacts
+end_time: 1778309242217
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cf83d6b76d4a45aea4d895e4c0bed3a5
+run_name: thoughtful-toad-1000
+run_uuid: cf83d6b76d4a45aea4d895e4c0bed3a5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778309229803
+status: 3
+tags: []
+user_id: runner
