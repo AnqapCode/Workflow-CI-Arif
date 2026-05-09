@@ -62,8 +62,7 @@ jobs:
     - name: Build Docker Model
       run: |
         cd MLProject
-        # Membangun docker langsung dari folder artifact autolog MLflow
-        mlflow models build-docker -m "mlruns/0/${{ env.RUN_ID }}/artifacts/model" -n housing-model:latest
+        mlflow models build-docker -m "mlruns/0/${{ env.RUN_ID }}/artifacts/model" -n housing-model:latest --env-manager=conda
 
     - name: Log in Docker Hub
       run: |
