@@ -62,8 +62,9 @@ jobs:
     - name: Build Docker Model
       run: |
         cd MLProject
-        python -c "import yaml; path='mlruns/0/${{ env.RUN_ID }}/artifacts/model/conda.yaml'; data=yaml.safe_load(open(path)); data['channels']=['conda-forge', 'nodefaults']; yaml.dump(data, open(path, 'w'))"
-        mlflow models build-docker -m "mlruns/0/${{ env.RUN_ID }}/artifacts/model" -n housing-model:latest --env-manager=conda
+        mlflow models generate-dockerfile -m "mlruns/0/${{ env.RUN_ID }}/artifacts/model" -d docker_build_dir --env-manager=conda
+        sed -i '/COPY model_dir/a RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main \&\& conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r' docker_build_dir/Dockerfile
+        docker build -t housing-model:latest docker_build_dir/
 
     - name: Log in Docker Hub
       run: |
