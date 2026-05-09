@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI-Arif/Workflow-CI-Arif/MLProject/mlruns/0/aebceab3b5b94b8b8b52d77c5d94abe5/artifacts
+end_time: 1778307588822
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: aebceab3b5b94b8b8b52d77c5d94abe5
+run_name: welcoming-seal-86
+run_uuid: aebceab3b5b94b8b8b52d77c5d94abe5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778307576638
+status: 3
+tags: []
+user_id: runner

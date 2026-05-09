@@ -1,0 +1,13 @@
+digest: ee7600b3
+name: dataset
+profile: '{"num_rows": 16512, "num_elements": 148608}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "longitude", "required": true},
+  {"type": "double", "name": "latitude", "required": true}, {"type": "double", "name":
+  "housing_median_age", "required": true}, {"type": "double", "name": "total_rooms",
+  "required": true}, {"type": "double", "name": "total_bedrooms", "required": true},
+  {"type": "double", "name": "population", "required": true}, {"type": "double", "name":
+  "households", "required": true}, {"type": "double", "name": "median_income", "required":
+  true}, {"type": "double", "name": "ocean_proximity", "required": true}]}'
+source: '{"tags": {"mlflow.user": "runner", "mlflow.source.name": "modelling.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "6cea34c7d539677c1283bade16e4d2e1ef8061e9"}}'
+source_type: code
