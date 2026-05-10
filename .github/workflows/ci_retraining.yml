@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Set Up Job (Otomatis dibuat oleh GitHub)
 
     - name: Run actions/checkout@v3
       uses: actions/checkout@v3
@@ -39,7 +38,7 @@ jobs:
     - name: Get latest MLflow run_id
       run: |
         cd MLProject
-        # Mengambil ID terbaru dari folder mlruns/0 (mengabaikan file meta.yaml)
+        # Mengambil ID terbaru dari folder mlruns/0
         RUN_ID=$(ls -t mlruns/0 | grep -v meta.yaml | head -n 1)
         echo "Run ID terbaru adalah: $RUN_ID"
         # Menyimpan RUN_ID ke environment variable GitHub agar bisa dipakai di step selanjutnya
@@ -47,15 +46,13 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        # Step ini mungkin dulunya untuk GDrive API, kita isi dengan upgrade setuptools
         pip install --upgrade setuptools wheel
 
     - name: Upload to Github
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        # Kita mengunggah folder mlruns yang berisi hasil model dari run ID terbaru
-        git add MLProject/mlruns/
+        git add -f MLProject/mlruns/
         git commit -m "Upload model artifact (Run ID: ${{ env.RUN_ID }}) to GitHub" || echo "No changes to commit"
         git push
 
@@ -77,5 +74,3 @@ jobs:
     - name: Push Docker Image
       run: |
         docker push ${{ secrets.DOCKERHUB_USERNAME }}/housing-model:latest
-
-    # Post steps dan Complete job (Otomatis dibuat oleh GitHub di akhir)
